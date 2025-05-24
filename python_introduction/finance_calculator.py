@@ -34,8 +34,8 @@ Projected savings after one year, with interest, is: $12600.
 SIMPLE_ANNUAL_INTEREST_RATE = 0.05
 
 #take user inputs
-monthly_income = float(input("Enter your monthly income: "))
-monthly_expenses = float(input("Enter your total monthly expenses: "))
+monthly_income = int(input("Enter your monthly income: "))
+monthly_expenses = int(input("Enter your total monthly expenses: "))
 
 #calculate monthly savings
 monthly_savings = monthly_income - monthly_expenses
@@ -44,5 +44,9 @@ monthly_savings = monthly_income - monthly_expenses
 projected_annual_savings = monthly_savings * 12 + (monthly_savings * 12 * SIMPLE_ANNUAL_INTEREST_RATE)
 
 #displaying results
+"""
 print("Your monthly savings are $", monthly_savings, ".")
 print("Projected savings after one year, with interest, is: $", projected_annual_savings, ".")
+"""
+print(f"Your monthly savings are ${monthly_savings}.")
+print(f"Projected savings after one year, with interest, is: ${projected_annual_savings}.")
