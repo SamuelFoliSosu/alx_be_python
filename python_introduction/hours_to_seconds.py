@@ -20,3 +20,11 @@ Given the value hours = 2, your script should output:
 
 """
 
+#variable declaration
+hours = 2
+
+#calcuations
+seconds = 3600 * hours
+
+#printing output
+print(hours, "hour(s) is", seconds, "seconds.")
