@@ -40,5 +40,5 @@ This task is designed to reinforce the concept of for loops by applying them in 
 number = int(input("Enter a number to see its multiplication table: "))
 
 #generate and print table
-for number, loop_step = 0, loop_step++
+for loop_step in range (1,11):
     print(f"{number} * {loop_step} = {number*loop_step}")
