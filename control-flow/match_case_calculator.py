@@ -1,6 +1,6 @@
 """
 
-Objective: Learn to use Match Case statements for handling multiple operations in a simple calculator program.
+Objective: Learn to use Match Case statements for handling multiple operation in a simple calculator program.
 
 Task Description:
 
@@ -40,28 +40,32 @@ Cannot divide by zero.
 num1 = int(input("Enter the first number: "))
 num2 = int(input("Enter the second number: "))
 #take user's preferred operation
-operations = input("Choose the operation (+, -, *, /): ")
+operation = input("Choose the operation (+, -, *, /): ")
 
 #perform user operation
-match operations:
+match operation:
     #addition
     case "+":
-        result = num1 + num2
-        print(f"The result is {result}.")
+        print(f"The result is {num1 + num2}")
+        # result = num1 + num2
+        # print(f"The result is {result}.")
 
     #subtract
     case "-":
-        result = num1 - num2
-        print(f"The result is {result}.")
+        print(f"The result is {num1 - num2}")
+        # result = num1 - num2
+        # print(f"The result is {result}.")
 
     #multiply
     case "*":
-        result = num1 * num2
-        print(f"The result is {result}.")
+        print(f"The result is {num1 * num2}")
+        # result = num1 * num2
+        # print(f"The result is {result}.")
 
     #divide
     case "/":
         if num2 != 0: 
-            result = num1 / num2
-            print(f"The result is {result}.")
+            print(f"The result is {num1 / num2}")
+            # result = num1 / num2
+            # print(f"The result is {result}.")
         else: print("Cannot divide by zero.")
