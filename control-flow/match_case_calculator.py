@@ -40,10 +40,10 @@ Cannot divide by zero.
 num1 = int(input("Enter the first number: "))
 num2 = int(input("Enter the second number: "))
 #take user's preferred operation
-operation = input("Choose the operation (+, -, *, /): ")
+operations = input("Choose the operation (+, -, *, /): ")
 
 #perform user operation
-match operation:
+match operations:
     #addition
     case "+":
         result = num1 + num2
