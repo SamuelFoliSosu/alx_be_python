@@ -34,7 +34,7 @@ Sorry, I don't have recommendations for this weather.
 """
 
 #taking user input
-weather = input("What's the weather like today? (sunny/rainy/cold): ")
+weather = input("What's the weather like today? (sunny/rainy/cold): ").lower
 
 #check weather input and recommend clothing
 if weather == "sunny":
