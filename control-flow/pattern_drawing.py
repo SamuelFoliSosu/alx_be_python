@@ -28,3 +28,9 @@ Enter the size of the pattern: 4
 
 """
 
+#take user input
+size = int(input("Enter the size of the pattern: "))
+
+while size < 0:
+    for i in range(size):
+        print(f"{"*" * size}")
