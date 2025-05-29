@@ -45,25 +45,25 @@ operation = input("Choose the operation (+, -, *, /): ")
 #perform user operation
 match operation:
     #addition
-    case "+":
+    case '+':
         print(f"The result is {num1 + num2}")
         # result = num1 + num2
         # print(f"The result is {result}.")
 
     #subtract
-    case "-":
+    case '-':
         print(f"The result is {num1 - num2}")
         # result = num1 - num2
         # print(f"The result is {result}.")
 
     #multiply
-    case "*":
+    case '*':
         print(f"The result is {num1 * num2}")
         # result = num1 * num2
         # print(f"The result is {result}.")
 
     #divide
-    case "/":
+    case '/':
         if num2 != 0: 
             print(f"The result is {num1 / num2}")
             # result = num1 / num2
