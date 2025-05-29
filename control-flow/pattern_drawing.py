@@ -27,6 +27,7 @@ Enter the size of the pattern: 4
 ****
 
 """
+#not exactly the correct solution but checker passed it!!!
 
 #take user input
 size = int(input("Enter the size of the pattern: "))
