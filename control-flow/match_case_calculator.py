@@ -42,23 +42,26 @@ num2 = int(input("Enter the second number: "))
 #take user's preferred operation
 operation = input("Choose the operation (+, -, *, /): ")
 
-#match operation
+#perform user operation
+match operation:
+    #addition
+    case "+":
+        result = num1 + num2
+        print(f"The result is {result}.")
 
-#addition
-result = num1 + num2
-print(f"The result is {result}.")
+    #subtract
+    case "-":
+        result = num1 - num2
+        print(f"The result is {result}.")
 
-#subtract
-result = num1 - num2
-print(f"The result is {result}.")
+    #multiply
+    case "*":
+        result = num1 * num2
+        print(f"The result is {result}.")
 
-#multiply
-result = num1 * num2
-print(f"The result is {result}.")
-
-#divide
-if num2 != 0:
-    result = num1 / num2
-    print(f"The result is {result}.")
-else:
-    print("Cannot divide by zero.")
+    #divide
+    case "/":
+        if num2 != 0: 
+            result = num1 / num2
+            print(f"The result is {result}.")
+        else: print("Cannot divide by zero.")
