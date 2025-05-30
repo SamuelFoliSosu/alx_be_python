@@ -38,3 +38,5 @@ Note: 'Read a book' is a low priority task. Consider completing it when you have
 
 """
 
+#take user input
+task = input("Enter your task: ")
