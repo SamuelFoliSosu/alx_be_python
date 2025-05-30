@@ -40,3 +40,14 @@ Note: 'Read a book' is a low priority task. Consider completing it when you have
 
 #take user input
 task = input("Enter your task: ")
+priority = input("Priority (high/medium/low): ").lower()
+time_bound = input("Is it time-bound? (yes/no): ").lower()
+
+#check priority of task
+match priority:
+    case "high": message = "high"
+    case "medium": message = "medium"
+    case "low": message = "low"
+
+if time_bound == "high":
+    
