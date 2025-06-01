@@ -27,3 +27,35 @@ yes
 ... (new game starts)
 
 """
+#importing the random module
+import random
+
+#secret number is any random number between 1 and 10
+secret_number = random.randint(1,10)
+print(secret_number)
+
+#take user guess input
+guess = int(input("\nI'm thinking of a number between 1 and 10. Can you guess it?"))
+
+#initialize attempt counter
+attempt = 0
+
+play_again = "yes"
+
+# """
+#check user's guess against secret number
+match guess:
+    case guess if guess > secret_number:
+        print("Oops, your guess is a bit high. Try again! :")
+        attempt += 1
+        guess = int(input())
+
+    case guess if guess < secret_number:
+        print("Nope, your guess is a bit low. Give it another shot! :")
+        attempt += 1
+        guess = int(input())
+
+    case guess if guess == secret_number:
+        attempt += 1
+        print(f"Congratulations, you guessed it in {attempt} attempt(s)!")
+# """
