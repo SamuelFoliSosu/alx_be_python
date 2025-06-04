@@ -1,18 +1,3 @@
-def perform_operation(num1, num2, operation):
-    match operation:
-        case "add" | "+":
-            return num1 + num2
-        case "subtract" | "-":
-            return num1 - num2
-        case "multiply" | "*":
-            return num1 * num2
-        case "divide" | "/" if num2 != 0:
-            return num1 / num2
-        case "divide" | "/" if num2 == 0:
-            divide_by_zero_error_message = "You cannot divide by 0"
-            return divide_by_zero_error_message
-        
-
 """
 0. Arithmetic Operations Function mandatory
 
@@ -28,3 +13,35 @@ Return the result of the arithmetic operation.
 
 """
 #function declaration
+def perform_operation(num1, num2, operation):
+    # this didn't really work. Not sure why
+    # 
+    # if operation == "add" or "+":
+    #     return num1 + num2
+    # elif operation == "subtract" or "-":
+    #     return num1 - num2
+    # elif operation == "multiply" or "*":
+    #     return num1 * num2
+    # elif operation == "divide" or "/" and num2 != 0:
+    #     return num1 / num2
+    # elif operation == "divide" or "/" and num2 == 0:
+    #     message = "You cannot divide by 0"
+    #     return message
+
+    match operation:
+        case "add" | "+":
+            return num1 + num2
+        case "subtract" | "-":
+            return num1 - num2
+        case "multiply" | "*":
+            return num1 * num2
+        case "divide" | "/":
+            if num2 != 0:
+                return num1 / num2
+            else:
+                return "You cannot divide by 0"
+                # divide_by_zero_error_message = "You cannot divide by 0"
+                # return divide_by_zero_error_message        
+        
+# result = perform_operation(5,5,"*")
+# print(result)
