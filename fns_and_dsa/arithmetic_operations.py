@@ -1,3 +1,18 @@
+def perform_operation (num1, num2, operation):
+    match operation:
+        case "add" | "+":
+            return num1 + num2
+        case "subtract" | "-":
+            return num1 - num2
+        case "multiply" | "*":
+            return num1 * num2
+        case "divide" | "/" if num2 != 0:
+            return num1 / num2
+        case "divide" | "/" if num2 == 0:
+            divide_by_zero_error_message = "You cannot divide by 0"
+            return divide_by_zero_error_message
+        
+
 """
 0. Arithmetic Operations Function mandatory
 
@@ -13,16 +28,3 @@ Return the result of the arithmetic operation.
 
 """
 #function declaration
-def perform_operation (num1, num2, operation):
-    match operation:
-        case "add" | "+":
-            return num1 + num2
-        case "subtract" | "-":
-            return num1 - num2
-        case "multiply" | "*":
-            return num1 * num2
-        case "divide" | "/" if num2 != 0:
-            return num1 / num2
-        case "divide" | "/" if num2 == 0:
-            divide_by_zero_error_message = "You cannot divide by 0"
-            return divide_by_zero_error_message
