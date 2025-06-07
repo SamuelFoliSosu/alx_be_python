@@ -13,6 +13,7 @@ Research how to use the datetime module to obtain the current date and time.
 Create a function with a name display_current_datetime and
 save the current date inside a current_date variable
 Format and print the current date and time in a readable format, such as “YYYY-MM-DD HH:MM:SS”.
+
 Part 2: Calculate a Future Date
 
 Prompt the user to enter a number of days (as an integer).
@@ -31,3 +32,15 @@ Enter the number of days to add to the current date: 10
 Future date: 2024-04-04
 
 """
+from datetime import datetime, date, time, timedelta
+
+def display_current_datetime():
+    return datetime.today()
+
+current_date = display_current_datetime()#.isoformat()
+
+print(current_date)
+
+# future_date = 0
+
+#YYYY-MM-DD HH:MM:SS
