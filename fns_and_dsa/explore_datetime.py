@@ -35,11 +35,14 @@ Future date: 2024-04-04
 from datetime import datetime, date, time, timedelta
 
 def display_current_datetime():
-    return datetime.today()
+    # return datetime.today()
+    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-current_date = display_current_datetime().isoformat(sep=' ', timespec='seconds')
+current_date = display_current_datetime()#.strftime("%Y-%m-%d %H:%M:%S")
 
 print(current_date)
+print(type(current_date))
+
 
 # future_date = 0
 
