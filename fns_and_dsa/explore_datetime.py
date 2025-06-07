@@ -35,17 +35,18 @@ Future date: 2024-04-04
 from datetime import datetime, timedelta
 
 def display_current_datetime():
-    # return datetime.today()
-    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    current_date = datetime.now()
+    return current_date.strftime("%Y-%m-%d %H:%M:%S")
 
-def calculate_future_date():
-    return datetime.now() + timedelta(days = number_of_days)
+def calculate_future_date(days):
+    future_date = datetime.now() + timedelta(days = days)
+    return future_date.strftime("%Y-%m-%d")
 
-current_date = display_current_datetime()#.strftime("%Y-%m-%d %H:%M:%S")
+current_date = display_current_datetime()
 print(f"Current date and time: {current_date}")
 
 
 number_of_days = int(input("Enter the number of days to add to the current date: "))
 
-future_date = calculate_future_date().strftime("%Y-%m-%d")
+future_date = calculate_future_date(number_of_days)#.strftime("%Y-%m-%d")
 print(f"Future date: {future_date}")
