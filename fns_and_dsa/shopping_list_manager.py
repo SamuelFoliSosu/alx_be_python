@@ -78,12 +78,15 @@ def main():
         elif choice == '2':
             # Prompt for and remove an item
             remove_item = input("Enter the item to remove: ")
-            shopping_list.remove(remove_item)
+            if remove_item in shopping_list:
+                shopping_list.remove(remove_item)
+            else:
+                print(f"{remove_item} not found in the shopping list.")
             pass
         elif choice == '3':
             # Display the shopping list
-            for list_item in shopping_list:
-                print(f"List item at index [{shopping_list.index(list_item)}] is {list_item}")
+            for index, list_item in enumerate(shopping_list):
+                print(f"Shopping list item at index [{index}] is {list_item}")
             pass
         elif choice == '4':
             print("Goodbye!\n")
