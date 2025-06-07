@@ -37,7 +37,7 @@ from datetime import datetime, date, time, timedelta
 def display_current_datetime():
     return datetime.today()
 
-current_date = display_current_datetime()#.isoformat()
+current_date = display_current_datetime().isoformat(sep=' ', timespec='seconds')
 
 print(current_date)
 
