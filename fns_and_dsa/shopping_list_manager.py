@@ -77,8 +77,8 @@ def main():
             pass
         elif choice == '2':
             # Prompt for and remove an item
-            sample = shopping_list.remove(input("Enter the item to remove "))
-            print(type(sample))
+            remove_item = input("Enter the item to remove ")
+            shopping_list.remove(remove_item)
             pass
         elif choice == '3':
             # Display the shopping list
