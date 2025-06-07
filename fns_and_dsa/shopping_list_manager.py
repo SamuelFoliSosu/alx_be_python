@@ -55,7 +55,8 @@ You are responsible for completing the main() function with the appropriate logi
 This task introduces you to working with lists in a practical scenario, enhancing your understanding of how dynamic data structures can be manipulated and utilized in Python programs.
 
 """
-
+# """
+#---------code start------------
 def display_menu():
     print("Shopping List Manager")
     print("1. Add Item")
@@ -71,18 +72,42 @@ def main():
 
         if choice == '1':
             # Prompt for and add an item
+            shopping_list.append(input("Type an item to add "))
             pass
         elif choice == '2':
             # Prompt for and remove an item
+            sample = shopping_list.remove(input("Type an item to remove "))
+            print(type(sample))
             pass
         elif choice == '3':
             # Display the shopping list
+            for list_item in shopping_list:
+                print(f"List item at index [{shopping_list.index(list_item)}] is {list_item}")
             pass
         elif choice == '4':
-            print("Goodbye!")
+            print("Goodbye!\n")
             break
         else:
-            print("Invalid choice. Please try again.")
+            print("Invalid choice. Please try again.\n")
 
 if __name__ == "__main__":
     main()
+#----------code end------------
+# """
+
+
+
+"""
+sample_list = [1, 2, 3, False, "Sample String", 2.1]
+# print(sample_list)
+print("\n",type(sample_list))
+
+for list_item in sample_list:
+    print(f"List item at index [{sample_list.index(list_item)}] is {list_item}")
+
+sample_list.append(50)
+
+print("\nIterating through the appended list")
+for list_item in sample_list:
+    print(f"List item at index [{sample_list.index(list_item)}] is {list_item}")
+# """
