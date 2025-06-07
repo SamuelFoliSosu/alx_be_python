@@ -72,11 +72,11 @@ def main():
 
         if choice == '1':
             # Prompt for and add an item
-            shopping_list.append(input("Type an item to add "))
+            shopping_list.append(input("Enter the item to add "))
             pass
         elif choice == '2':
             # Prompt for and remove an item
-            sample = shopping_list.remove(input("Type an item to remove "))
+            sample = shopping_list.remove(input("Enter the item to remove "))
             print(type(sample))
             pass
         elif choice == '3':
