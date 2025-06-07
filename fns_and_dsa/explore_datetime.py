@@ -32,21 +32,26 @@ Enter the number of days to add to the current date: 10
 Future date: 2024-04-04
 
 """
-from datetime import datetime, timedelta
+#importing neccessary datetime modules
+from datetime import datetime, timedelta 
 
+#funtion declaration - calculate current date and time
 def display_current_datetime():
     current_date = datetime.now()
     return current_date.strftime("%Y-%m-%d %H:%M:%S")
 
+#function declaration - calculate future date, takes number of days as input and adds it to current date/time
 def calculate_future_date(days):
     future_date = datetime.now() + timedelta(days = days)
     return future_date.strftime("%Y-%m-%d")
 
+#function call, display current date and time
 current_date = display_current_datetime()
 print(f"Current date and time: {current_date}")
 
-
+#take user input on number of days to add to current date
 number_of_days = int(input("Enter the number of days to add to the current date: "))
 
-future_date = calculate_future_date(number_of_days)#.strftime("%Y-%m-%d")
+#function call, calculate future date
+future_date = calculate_future_date(number_of_days)
 print(f"Future date: {future_date}")
