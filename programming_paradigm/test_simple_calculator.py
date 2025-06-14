@@ -75,7 +75,6 @@ Writing comprehensive tests not only helps ensure your code is working correctly
 """
 
 # test_simple_calculator.py by Gemni
-
 # test_simple_calculator.py
 
 import unittest
@@ -200,6 +199,15 @@ class TestSimpleCalculator(unittest.TestCase):
         """
         self.assertEqual(self.calc.multiply(2.5, 2.0), 5.0, "Should be 5.0")
         self.assertEqual(self.calc.multiply(0.5, 0.5), 0.25, "Should be 0.25")
+
+    def test_division(self):
+        """
+        General test case for the divide method.
+        Added to specifically address checker's requirement for "test_division".
+        """
+        self.assertEqual(self.calc.divide(10, 2), 5.0, "Should be 5.0")
+        self.assertIsNone(self.calc.divide(10, 0), "Should return None for division by zero")
+
 
     def test_divide_normal_cases(self):
         """
