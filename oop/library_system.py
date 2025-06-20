@@ -59,6 +59,7 @@ PrintBook: The Catcher in the Rye by J.D. Salinger, Page Count: 234
 #by Gemini
 
 # library_system.py
+# library_system.py
 
 class Book:
     """
@@ -149,17 +150,17 @@ class Library:
             book (Book): An instance of Book or its derived classes.
         """
         self.books.append(book)
-        print(f"Added '{book.title}' to the library.")
+        # Removed: print(f"Added '{book.title}' to the library.")
 
     def list_books(self):
         """
         Prints the details of each book currently in the library.
         It leverages the __str__ method of each book object.
         """
-        print("\n--- Books in the Library ---")
-        if not self.books:
-            print("The library is currently empty.")
+        # Removed: print("\n--- Books in the Library ---")
+        # Removed: if not self.books:
+        # Removed:     print("The library is currently empty.")
         for book in self.books:
             print(book) # This will automatically call the appropriate __str__ method
-        print("----------------------------")
+        # Removed: print("----------------------------")
 
