@@ -49,6 +49,7 @@ Deleting 1984
 #by Gemini
 
 # book_class.py
+# book_class.py
 
 class Book:
     """
@@ -70,7 +71,7 @@ class Book:
         self.title = title
         self.author = author
         self.year = year
-        print(f"Book '{self.title}' created.") # Optional: Added for clarity when object is created
+        # Removed: print(f"Book '{self.title}' created.") - This line caused the extra output.
 
     def __del__(self):
         """
@@ -100,5 +101,4 @@ class Book:
                  f"Book('{self.title}', '{self.author}', {self.year})"
         """
         return f"Book('{self.title}', '{self.author}', {self.year})"
-
 
