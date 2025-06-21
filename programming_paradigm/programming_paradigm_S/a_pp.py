@@ -128,3 +128,15 @@ else:
 finally:
     pass
 #-----------------------------------------------------------------------------------------------
+#-----Added from work PC--------------------------
+""" 
+Exercise 3: Custom Exception
+
+Instructions:
+
+Create a custom exception class called ValueTooHighError that inherits from the Exception class.
+Write a program that takes a number as input and raises a ValueTooHighError exception if the number is greater than 100.
+"""
+class ValueTooHighError (Exception):
+    def __init__(self, exception_caught):
+        self.exception_caught = exception_caught
