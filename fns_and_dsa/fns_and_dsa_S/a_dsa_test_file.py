@@ -1,5 +1,5 @@
 #list
-my_list = [1, 2, "three", 4.0, False, 15, 2, 1, 2, "three", 4.0, False, 4.0, False, 2]
+my_list = [1, 2, "three", 4.0, False, 15, 2, 1, 2, "three", 4.0, False, 4.1, False, 2]
 print(f"{type(my_list)} of lenght {len(my_list)} = {my_list}")
 
 my_list_slice = my_list[::3]
