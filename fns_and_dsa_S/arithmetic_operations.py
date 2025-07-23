@@ -35,11 +35,11 @@ def perform_operation(num1, num2, operation):
         print("multiply")
         return num1 * num2
         pass
-    elif operation == "divide" or operation == "/" or operation == "d" and num2 != 0:
+    elif (operation == "divide" or operation == "/" or operation == "d") and num2 != 0:
         print("divide")
         return num1 / num2
         pass
-    elif operation == "divide" or operation == "/" or operation == "d" and num2 == 0:
+    elif (operation == "divide" or operation == "/" or operation == "d") and num2 == 0:
         print("divide by zero")
         message = "You cannot divide by 0"
         return message
