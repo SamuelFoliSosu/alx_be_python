@@ -14,34 +14,60 @@ Return the result of the arithmetic operation.
 """
 #function declaration
 def perform_operation(num1, num2, operation):
-    # this didn't really work. Not sure why
-    # 
-    # if operation == "add" or "+":
-    #     return num1 + num2
-    # elif operation == "subtract" or "-":
-    #     return num1 - num2
-    # elif operation == "multiply" or "*":
-    #     return num1 * num2
-    # elif operation == "divide" or "/" and num2 != 0:
-    #     return num1 / num2
-    # elif operation == "divide" or "/" and num2 == 0:
-    #     message = "You cannot divide by 0"
-    #     return message
 
-    match operation:
-        case "add" | "+" | "a":
-            return num1 + num2
-        case "subtract" | "-" | "s":
-            return num1 - num2
-        case "multiply" | "*" | "m":
-            return num1 * num2
-        case "divide" | "/" | "d":
-            if num2 != 0:
-                return num1 / num2
-            else:
-                return "You cannot divide by 0"
+#for debugging purposes
+    print(f"num1 = {num1}")
+    print(f"num2 = {num2}")
+    print(f"operation = {operation}")
+
+#----------------------------------------------------------------------
+#if-elif-else implementation of problem statement - start
+#----------------------------------------------------------------------
+    if operation == "add" or operation == "+" or operation == "a":
+        print("add")
+        return num1 + num2
+        pass
+    elif operation == "subtract" or operation == "-" or operation == "s":
+        print("subtract")
+        return num1 - num2
+        pass
+    elif operation == "multiply" or operation == "*" or operation == "m":
+        print("multiply")
+        return num1 * num2
+        pass
+    elif operation == "divide" or operation == "/" or operation == "d" and num2 != 0:
+        print("divide")
+        return num1 / num2
+        pass
+    elif operation == "divide" or operation == "/" or operation == "d" and num2 == 0:
+        print("divide by zero")
+        message = "You cannot divide by 0"
+        return message
+        # return "You cannot divide by 0"
+        pass
+#if-elif-else implementation of problem statement - end
+
+#------------------------------------------------------------
+# Match-Case implementation of the problem statement - start
+# -----------------------------------------------------------
+    # match operation:
+    #     case "add" | "+" | "a":
+    #         return num1 + num2
+    #     case "subtract" | "-" | "s":
+    #         return num1 - num2
+    #     case "multiply" | "*" | "m":
+    #         return num1 * num2
+    #     case "divide" | "/" | "d":
+    #         if num2 != 0:
+    #             return num1 / num2
+    #         else:
+    #             return "You cannot divide by 0"
                 # divide_by_zero_error_message = "You cannot divide by 0"
-                # return divide_by_zero_error_message        
-        
-# result = perform_operation(5,5,"*")
-# print(result)
+                # return divide_by_zero_error_message    
+# Match-Case implementation of the problem statement - end
+    
+#----------------------------------------------------------
+#Testing my code
+#---------------------------------------------------------
+result = perform_operation(1,9,"a")
+print(result)
