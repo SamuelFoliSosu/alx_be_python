@@ -29,13 +29,13 @@ def perform_operation(num1, num2, operation):
     #     return message
 
     match operation:
-        case "add" | "+":
+        case "add" | "+" | "a":
             return num1 + num2
-        case "subtract" | "-":
+        case "subtract" | "-" | "s":
             return num1 - num2
-        case "multiply" | "*":
+        case "multiply" | "*" | "m":
             return num1 * num2
-        case "divide" | "/":
+        case "divide" | "/" | "d":
             if num2 != 0:
                 return num1 / num2
             else:
