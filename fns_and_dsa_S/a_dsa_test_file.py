@@ -20,9 +20,9 @@ print(greeting("John"))
 # Use the return statement to return the calculated area.
 def area_of_a_rectangle(length, width):
     area = length * width
-    return (area)
+    return "Area of rectangle is " + str(area)
 
-print("Area of rectangle is" , area_of_a_rectangle(2,5))
+print(area_of_a_rectangle(2,5))
 
 # Exercise 3: Develop a function to check if a number is even or odd.
 # Instructions:
@@ -89,7 +89,7 @@ for n in range(10):
     # random_numbers.append(n)
     random_numbers.append(random.randint(1,10))
 
-print(random_numbers)
+print("Printing random numbers:" , random_numbers)
 
 random_set = set(random_numbers)
-print(random_set)
+print("Printing random set:" , random_set)
