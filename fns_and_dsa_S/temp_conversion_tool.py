@@ -54,9 +54,9 @@ temperature = float(input("Enter the temperature to convert: "))
 conversion_unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").lower()
 
 match conversion_unit:
-    case "c" if temperature.is_integer():
+    case "c" if temperature.is_integer() or (isinstance(temperature, float) == True):
         print(f"{temperature}°C is {convert_to_fahrenheit(temperature)}°F")
-    case "f" if temperature.is_integer():
+    case "f" if temperature.is_integer() or (isinstance(temperature, float) == True):
         print(f"{temperature}°F is {convert_to_celsius(temperature)}°C")
     case _:
         print("Invalid temperature. Please enter a numeric value.")
