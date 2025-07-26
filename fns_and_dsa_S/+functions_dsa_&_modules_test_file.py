@@ -48,6 +48,8 @@ def increment():
 increment()
 print(count)  # Output: 0 (Global count remains unchanged)
 
+# ---------------------------------------------------------------------------------------------------------------------
+
 #list
 my_list = [1, 2, "three", 4.0, False, 15, 2, 1, 2, "three", 4.0, False, 4.1, False, 2]
 print(f"{type(my_list)} of lenght {len(my_list)} = {my_list}")
@@ -72,6 +74,7 @@ print(f"{type(my_dict)} of length {len(my_dict)} = {my_dict}")
 # print(my_dict.values())
 print(my_dict.get("Kojo"))
 
+# ---------------------------------------------------------------------------------------------------------------------
 
 # Practice Exercise
 # Exercise 1: Create a list to store names of your favorite fruits. Write code to access the second element and print it.
@@ -93,3 +96,5 @@ print("Printing random numbers:" , random_numbers)
 
 random_set = set(random_numbers)
 print("Printing random set:" , random_set)
+
+# ---------------------------------------------------------------------------------------------------------------------
