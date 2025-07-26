@@ -1,3 +1,5 @@
+import random
+
 # Practice Exercises
 # Exercise 1: Write a function to greet the user by name.
 # Instructions:
@@ -65,7 +67,29 @@ print(f"{type(my_set)} of lenght {len(my_set)} = {my_set}")
 #dictionary
 my_dict = {"Ama" : 12, "Kojo" : 25, "Kwame" : 45}
 print(f"{type(my_dict)} of length {len(my_dict)} = {my_dict}")
-print(my_dict.keys())
-print(my_dict.items())
-print(my_dict.values())
+# print(my_dict.keys())
+# print(my_dict.items())
+# print(my_dict.values())
 print(my_dict.get("Kojo"))
+
+
+# Practice Exercise
+# Exercise 1: Create a list to store names of your favorite fruits. Write code to access the second element and print it.
+my_fav_fruits = ["Apple", "Pineapple", "Grapes" , "Bananna"]
+print(my_fav_fruits[1])
+
+# Exercise 2: Define a dictionary to store information about your favorite book, including title, author, and genre. Use the method to retrieve the genre.
+my_fav_book = {"title": "Who ate my cheese?" , "author" : "Someone" , "genre" : "Self-help"}
+print(my_fav_book.get("genre"))
+
+# Exercise 3: Write a program to generate a random set of numbers between 1 and ten. Use set operations to remove duplicates and display the unique numbers.
+random_numbers = []
+for n in range(10):
+    # print(n)
+    # random_numbers.append(n)
+    random_numbers.append(random.randint(1,10))
+
+print(random_numbers)
+
+random_set = set(random_numbers)
+print(random_set)
