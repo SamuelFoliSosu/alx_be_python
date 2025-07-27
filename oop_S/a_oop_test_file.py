@@ -8,12 +8,15 @@ class Student:
         self.age = age
 
     def get_student_name(self):
+        """get name of student"""
         return self.name
     
     def get_student_age(self):
+        """get age of student"""
         return self.age
     
     def display_student_info(self):
+        """display information of student"""
         student_info = f"Student name: {self.name}, age: {self.age}"
         return student_info
 
@@ -22,6 +25,7 @@ print(Student1.name)
 print(Student1.age)
 print(Student1.get_student_age())
 print(Student1.get_student_name())
+print(Student1.display_student_info())
 
 # Exercise 2: Creating a Product Catalog
 # Instruction:
@@ -41,3 +45,15 @@ print(Mangoes.name)
 print(Mangoes.price)
 print(Mangoes.quantity)
 print(Mangoes.total_value_of_products())
+
+def login(email, password):
+    # if email == "doe@alxafrica.com" and password == "vkdn343":
+    #     return True
+    # else:
+    #     return False
+
+    # return True if email == "doe@alxafrica.com" and password == "vkdn343" else False
+    
+    return email == "doe@alxafrica.com" and password == "vkdn343"
+
+print(login("doe@alxafrica.com","vkdn343"))
