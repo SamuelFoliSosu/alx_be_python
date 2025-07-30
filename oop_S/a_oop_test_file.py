@@ -54,6 +54,71 @@ def login(email, password):
 
     # return True if email == "doe@alxafrica.com" and password == "vkdn343" else False
     
-    return email == "doe@alxafrica.com" and password == "vkdn343"
+    return email == "doe@alxafrica.com" and password == "vkdn3431"
 
 print(login("doe@alxafrica.com","vkdn343"))
+
+try:
+    # code
+    print("Hello Try")
+except Exception:
+    # code
+    print("Hello Exception")
+else:
+    # code
+    print("Hello Else")
+finally:
+    # code
+    print("Hello Finally")
+
+def divide(x , y):
+    """divides two numbers, x as the numerator and y as the denomenator"""
+    if y == 0:
+        raise ZeroDivisionError("Division by zero is not alloweddddddd!")
+    return x / y
+
+# x = int(input("enter x value: "))
+# y = int(input("enter y value: "))
+
+print(divide(1 , 2))
+
+class OutOfStockError(Exception):
+    
+    """Custom exception for handling out-of-stock items."""
+
+    def __init__(self, item_name):
+        self.item_name = item_name
+
+    def __str__(self):
+        return f"Sorry, the item '{self.item_name}' is out of stock."
+
+#Sample Product Inventory
+product_inventory = {
+    "apple" : 10,
+    "bannaa" : 5,
+    "orange" : 0, #Out of stock
+    "grapes" : 3
+}
+
+def purchase_item(item, quantity):
+    try:
+        if product_inventory[item] < quantity and product_inventory[item] != 0:
+            print(f"{quantity} not possible, only {product_inventory[item]} {item}(s) left")
+        elif product_inventory[item] < quantity and product_inventory[item] == 0:
+            raise OutOfStockError(item)
+        else:
+            print(f"Purchase successful: {quantity} {item}(s)")
+            product_inventory[item] = product_inventory[item] - quantity
+            print(f"{product_inventory[item]} {item}(s) left")
+    except KeyError:
+        print(f"Sorry, '{item}' is not available in our inventory.")
+
+# Testing the Custom Exception
+try:
+    # for p in range(11):
+        purchase_item("apple" , 1)
+        purchase_item("apple" , 3)
+        purchase_item("orange" , 1)
+        purchase_item("watermelon" , 1)
+except OutOfStockError as e:
+    print(e)
