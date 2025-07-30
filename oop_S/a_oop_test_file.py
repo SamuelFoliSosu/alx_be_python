@@ -1,3 +1,4 @@
+import os
 # Practice Exercises
 # Exercise 1: Creating a Student Class
 # Instructions:
@@ -103,22 +104,104 @@ product_inventory = {
 def purchase_item(item, quantity):
     try:
         if product_inventory[item] < quantity and product_inventory[item] != 0:
-            print(f"{quantity} not possible, only {product_inventory[item]} {item}(s) left")
+            if product_inventory[item] == 1:
+                print(f"Purchasing {quantity} {item}s not possible, only {product_inventory[item]} {item} left")
+            else:
+                print(f"Purchasing {quantity} {item}s not possible, only {product_inventory[item]} {item}s left")
         elif product_inventory[item] < quantity and product_inventory[item] == 0:
             raise OutOfStockError(item)
         else:
             print(f"Purchase successful: {quantity} {item}(s)")
             product_inventory[item] = product_inventory[item] - quantity
-            print(f"{product_inventory[item]} {item}(s) left")
+            if product_inventory[item] == 1:
+                print(f"{product_inventory[item]} {item} left")
+            else:
+                print(f"{product_inventory[item]} {item}s left")
     except KeyError:
         print(f"Sorry, '{item}' is not available in our inventory.")
 
 # Testing the Custom Exception
 try:
     # for p in range(11):
-        purchase_item("apple" , 1)
-        purchase_item("apple" , 3)
-        purchase_item("orange" , 1)
+        purchase_item("apple" , 8)
+        purchase_item("apple" , 11)
+        # purchase_item("orange" , 1)
         purchase_item("watermelon" , 1)
 except OutOfStockError as e:
     print(e)
+
+#---------
+# Practice Exercises
+# Exercise 1: Handling ZeroDivisionError
+# Instructions:
+# Write a program that takes two numbers as input from the user and divides the first number by the second number.
+# Handle the ZeroDivisionError exception to inform the user if they attempt to divide by zero.
+def takndivide():
+    print("\nEntering the function . . .\n")
+
+    in1 = 1 #int(input("Your first number: "))
+    in2 = 2 #int(input("Your second number: "))
+
+    try:
+        ans = in1 / in2
+    except ZeroDivisionError as e:
+        print(e)
+    else:
+        return in1, in2, ans
+    finally:
+        print("\n. . . Exiting the function\n")
+
+try:
+    result = takndivide()
+    print(f"{result[0]} divided by {result[1]} = {result[2]}\n")
+except Exception as e:
+    print(e,"\n")
+
+# Exercise 2: File Handling with FileNotFoundError
+# Instructions:
+# Write a program that attempts to open and read data from a file specified by the user.
+# Handle the FileNotFoundError exception to provide a meaningful message if the file does not exist.
+try:
+    file1 = open('C:/ALX_BE_C5/alx_be_python/oop_S/book_class.txt')
+except FileNotFoundError as e:
+    print("Exception caught:", e)
+else:
+    try:
+        file = file1.read()
+        try:
+            file1.close()
+        except Exception as e:
+            print("Exception caught:", e)
+    except Exception as e:
+        print("Exception caught:", e)
+    else:
+        print(file)
+
+
+# Exercise 3: Custom Exception
+# Instructions:
+# Create a custom exception class called ValueTooHighError that inherits from the Exception class.
+# Write a program that takes a number as input and raises a ValueTooHighError exception if the number is greater than 100.
+class ValueTooHighError(Exception):
+    pass
+
+class ValueGargantuanError(ValueTooHighError):
+    pass
+
+def takenum():
+    """takes a number as input and raises a ValueTooHighError exception if the number is greater than 100"""
+
+    num = int(input("Enter a number . . . : "))
+    try:
+        if num > 100 and num <= 10_000:
+            raise ValueTooHighError
+        elif num > 10_000:
+            raise ValueGargantuanError
+    except ValueGargantuanError:
+        print("Value too Gargantuan!")
+    except ValueTooHighError:
+        print("Value too high")
+    
+    pass
+
+numtake = takenum()
